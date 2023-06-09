@@ -3,11 +3,11 @@ import pickle
 import numpy as np
 import pandas as pd
 model = pickle.load(
-    open('C:\DHANUSH\ML\Fertilizer\FertilizerFinal.pickle', 'rb'))
+    open('FertilizerFinal.pickle', 'rb'))
 
 
 def predict_name(Temperature, Humidity, Moisture, SoilType, CropType, Nitrogen, Potassium, Phosphorous):
-    df = pd.read_csv('C:\DHANUSH\ML\Fertilizer\Fertilizer Prediction.csv')
+    df = pd.read_csv('Fertilizer Prediction.csv')
     df.drop('Fertilizer Name', axis=1, inplace=True)
     ctremap = {"Sugarcane": 0, "Cotton": 1, "Millets": 2, "Paddy": 3, "Pulses": 4,
                "Wheat": 5, "Tobacco": 6, "Barley": 7, "Oil seeds": 8, "Ground Nuts": 9, "Maize": 10}
